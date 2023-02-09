@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#00FFFFFF"
+        android:backgroundTint="#00FFFFFF">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/monsterRecycler"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="8dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/sortby_spinner"
+            tools:listitem="@layout/monster_item" />
+
+        <Button
+            android:id="@+id/filter_button"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginEnd="16dp"
+            android:text="filter"
+            app:layout_constraintBottom_toBottomOf="@+id/filter_editText"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/filter_editText" />
+
+        <Button
+            android:id="@+id/sort_button"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="sort"
+            app:layout_constraintBottom_toBottomOf="@+id/sortby_spinner"
+            app:layout_constraintEnd_toEndOf="@+id/filter_button"
+            app:layout_constraintStart_toStartOf="@+id/filter_button"
+            app:layout_constraintTop_toTopOf="@+id/sortby_spinner" />
+
+        <EditText
+            android:id="@+id/filter_editText"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:ems="10"
+            android:hint="Search for Monsters.."
+            android:inputType="textPersonName"
+            app:layout_constraintEnd_toStartOf="@+id/filter_button"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Spinner
+            android:id="@+id/sortby_spinner"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="8dp"
+            android:entries="@array/sort_string_array"
+            app:layout_constraintEnd_toEndOf="@+id/filter_editText"
+            app:layout_constraintStart_toStartOf="@+id/filter_editText"
+            app:layout_constraintTop_toBottomOf="@+id/filter_editText" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

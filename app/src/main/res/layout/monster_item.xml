@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#00FFFFFF">
+
+    <View
+        android:id="@+id/seperator_view_3"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginTop="16dp"
+        android:background="@android:color/darker_gray"
+        android:backgroundTint="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/monster_int" />
+
+    <View
+        android:id="@+id/seperator_view_2"
+        android:layout_width="0dp"
+        android:layout_height="2dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:background="@android:color/darker_gray"
+        android:backgroundTint="#F44336"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/monster_speed" />
+
+    <View
+        android:id="@+id/seperator_view_1"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:background="@android:color/darker_gray"
+        android:backgroundTint="#F44336"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/monster_type" />
+
+    <TextView
+        android:id="@+id/monster_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/monster_challenge_rating"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Adult Black Dragon" />
+
+    <TextView
+        android:id="@+id/monster_type"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/monster_challenge_rating"
+        app:layout_constraintStart_toStartOf="@+id/monster_name"
+        app:layout_constraintTop_toBottomOf="@+id/monster_name"
+        tools:text="Huge dragon, chaotic evil" />
+
+    <TextView
+        android:id="@+id/armor_class"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:text="Armor Class:"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/seperator_view_1" />
+
+    <TextView
+        android:id="@+id/hit_points"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Hit Points:"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/armor_class"
+        app:layout_constraintStart_toStartOf="@+id/armor_class"
+        app:layout_constraintTop_toBottomOf="@+id/monster_armor_class" />
+
+    <TextView
+        android:id="@+id/speed"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Speed:"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/hit_points"
+        app:layout_constraintStart_toStartOf="@+id/hit_points"
+        app:layout_constraintTop_toBottomOf="@+id/monster_hit_points" />
+
+    <TextView
+        android:id="@+id/monster_speed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/speed"
+        app:layout_constraintTop_toBottomOf="@+id/speed"
+        tools:text="40 ft., fly 80 ft., swim 40 ft." />
+
+    <TextView
+        android:id="@+id/monster_hit_points"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/hit_points"
+        app:layout_constraintTop_toBottomOf="@+id/hit_points"
+        tools:text="195 (17d12+85)" />
+
+    <TextView
+        android:id="@+id/monster_armor_class"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/armor_class"
+        app:layout_constraintTop_toBottomOf="@+id/armor_class"
+        tools:text="19 (Natural Armor)" />
+
+    <TextView
+        android:id="@+id/strength"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="STR"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/dexterity"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/seperator_view_2" />
+
+    <TextView
+        android:id="@+id/dexterity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="DEX"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/strength" />
+
+    <TextView
+        android:id="@+id/constitution"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CON"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/dexterity"
+        app:layout_constraintTop_toTopOf="@+id/dexterity" />
+
+    <TextView
+        android:id="@+id/intelligence"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="INT"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/strength"
+        app:layout_constraintStart_toStartOf="@+id/strength"
+        app:layout_constraintTop_toBottomOf="@+id/monster_str" />
+
+    <TextView
+        android:id="@+id/wisdom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="WIS"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/dexterity"
+        app:layout_constraintStart_toStartOf="@+id/dexterity"
+        app:layout_constraintTop_toTopOf="@+id/intelligence" />
+
+    <TextView
+        android:id="@+id/charisma"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CHA"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/constitution"
+        app:layout_constraintStart_toStartOf="@+id/constitution"
+        app:layout_constraintTop_toTopOf="@+id/wisdom" />
+
+    <TextView
+        android:id="@+id/monster_str"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:minWidth="50dp"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/strength"
+        app:layout_constraintStart_toStartOf="@+id/strength"
+        app:layout_constraintTop_toBottomOf="@+id/strength"
+        tools:text="23 (+6)" />
+
+    <TextView
+        android:id="@+id/monster_dex"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minWidth="50dp"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/dexterity"
+        app:layout_constraintStart_toStartOf="@+id/dexterity"
+        app:layout_constraintTop_toTopOf="@+id/monster_str"
+        tools:text="14 (+2)" />
+
+    <TextView
+        android:id="@+id/monster_con"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minWidth="50dp"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/constitution"
+        app:layout_constraintStart_toStartOf="@+id/constitution"
+        app:layout_constraintTop_toTopOf="@+id/monster_dex"
+        tools:text="21 (+5)" />
+
+    <TextView
+        android:id="@+id/monster_int"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:minWidth="50dp"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/monster_str"
+        app:layout_constraintStart_toStartOf="@+id/monster_str"
+        app:layout_constraintTop_toBottomOf="@+id/intelligence"
+        tools:text="14 (+2)" />
+
+    <TextView
+        android:id="@+id/monster_wis"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minWidth="50dp"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/wisdom"
+        app:layout_constraintStart_toStartOf="@+id/wisdom"
+        app:layout_constraintTop_toTopOf="@+id/monster_int"
+        tools:text="13 (+1)" />
+
+    <TextView
+        android:id="@+id/monster_cha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minWidth="50dp"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/monster_con"
+        app:layout_constraintStart_toStartOf="@+id/monster_con"
+        app:layout_constraintTop_toTopOf="@+id/monster_wis"
+        tools:text="17 (+3)" />
+
+    <TextView
+        android:id="@+id/monster_challenge_rating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/monster_name"
+        tools:text="CR 14" />
+
+    <ImageView
+        android:id="@+id/monster_image"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="@+id/monster_speed"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/dexterity"
+        app:layout_constraintTop_toBottomOf="@+id/seperator_view_1"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/adult_black_dragon" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
