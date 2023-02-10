@@ -13,6 +13,20 @@
         android:background="#00FFFFFF"
         android:backgroundTint="#00FFFFFF">
 
+        <View
+            android:id="@+id/seperator_view_"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:background="@android:color/darker_gray"
+            android:backgroundTint="#F44336"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/sortby_spinner" />
+
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/monsterRecycler"
             android:layout_width="0dp"
@@ -22,7 +36,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/sortby_spinner"
+            app:layout_constraintTop_toBottomOf="@+id/seperator_view_"
             tools:listitem="@layout/monster_item" />
 
         <Button

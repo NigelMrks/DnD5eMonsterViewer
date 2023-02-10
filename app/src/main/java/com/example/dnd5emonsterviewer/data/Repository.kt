@@ -19,6 +19,14 @@ class Repository(private val api: MonsterAPI) {
 
     var allMonsters = mutableListOf<Monster>()
 
+    private val _doneLoading: MutableLiveData<Boolean> = MutableLiveData<Boolean>()
+    val doneLoading: MutableLiveData<Boolean>
+        get() = _doneLoading
+
+    init {
+        _doneLoading.value = false
+    }
+
     suspend fun loadMonsterUrls() {
         _monsterUrls.value = api.retrofitService.getMonsterReferences().results
         getMonsters()
@@ -27,12 +35,30 @@ class Repository(private val api: MonsterAPI) {
     suspend fun getMonsters() {
         val monsterList = mutableListOf<Monster>()
         if (monsterUrls.value != null) {
+            /**
             for (url in monsterUrls.value!!) {
-                monsterList.add(api.retrofitService.getMonster(url.index))
+            monsterList.add(api.retrofitService.getMonster(url.index))
             }
+             */
+            var totalCount = 0
+            while (totalCount < monsterUrls.value!!.size) {
+                var indivCount = 0
+                while (indivCount < 25 && totalCount < monsterUrls.value!!.size) {
+                    monsterList.add(
+                        api.retrofitService.getMonster(monsterUrls.value!![totalCount].index)
+                    )
+                    indivCount++
+                    totalCount++
+                }
+                allMonsters = monsterList
+                _monsters.value = monsterList
+            }
+            _doneLoading.value = true
         }
+        /**
         allMonsters = monsterList
         _monsters.value = monsterList
+        */
     }
 
     fun filterList(empty: Boolean, filter: String) {

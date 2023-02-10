@@ -31,16 +31,15 @@ class HomeFragment : Fragment() {
         binding.monsterRecycler.adapter = monsterAdapter
 
         viewModel.monsters.observe(viewLifecycleOwner) {
-            Log.d("HomeFragment", "test")
             monsterAdapter.submitList(it)
         }
 
         binding.filterButton.setOnClickListener {
-            viewModel.filter(binding.filterEditText.text.toString().lowercase())
+            viewModel.filter(binding.filterEditText.text.toString().lowercase(), requireContext())
         }
 
         binding.sortButton.setOnClickListener {
-            viewModel.sortBy(binding.sortbySpinner.selectedItem.toString())
+            viewModel.sortBy(binding.sortbySpinner.selectedItem.toString(), requireContext())
         }
     }
 }
